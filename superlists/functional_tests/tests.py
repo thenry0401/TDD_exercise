@@ -67,7 +67,7 @@ class NewVisitorTest(LiveServerTestCase):
         # 에디스의 리스트는 보이지않는다
         self.browser.get(self.live_server_url)
         page_text = self.browser.find_element_by_tag_name('body').text
-        self.assertIn('Buy peacock feathers', page_text)
+        self.assertNotIn('Buy peacock feathers', page_text)
         self.assertNotIn('make a fly', page_text)
 
         #프란시스가 새로운 작업 아이템을 입력하기 시작한다
